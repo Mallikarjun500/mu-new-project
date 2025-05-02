@@ -1,4 +1,4 @@
-# mu-new-project
+# my-new-project
 Building an AI Project
 # image to speech converter
 
