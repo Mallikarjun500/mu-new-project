@@ -2,76 +2,18 @@
 Building an AI Project
 # image to speech converter
 
-Final project for the Building AI course
+@app. route ('/image speech')def img_speech ():
+video = cv2.VideoCapture(0)
+check, Image= video. Read () cv2.imshow("Colored", Image)key = cv2.waitKey(1) if key == Ord('s'):
+cv2.imwrite("web.jpg", Image)img = Image. Open('web.jpg') result=pytesseract.image_to_string(img)
+print(result)
+my obj = gTTS (text=result, lang='en', slow=False)myobj.save("1.mp3")
+mixer. init () mixer.music.load("1.mp3") mixer.music.set_volume (0.5)mixer.music.play () time.sleep(10) mixer.music.stop ()
+break
+key = cv2.waitKey(1)if key == Ord('q'):
 
-## Summary
+video. Release ()
+render template("home.html")if	name	== " main ":
+app.run()
 
-Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
-
-
-## Background
-
-Which problems does your idea solve? How common or frequent is this problem? What is your personal motivation? Why is this topic important or interesting?
-
-This is how you make a list, if you need one:
-* problem 1
-* problem 2
-* etc.
-
-
-## How is it used?
-
-Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
-
-Images will make your README look nice!
-Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
-
-If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
-
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
-
-
-## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
-## Challenges
-
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
-
-## What next?
-
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
-
-
-## Acknowledgments
-
-* list here the sources of inspiration 
-* do not use code, images, data etc. from others without permission
-* when you have permission to use other people's materials, always mention the original creator and the open source / Creative Commons licence they've used
-  <br>For example: [Sleeping Cat on Her Back by Umberto Salvagnin](https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg#filelinks) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-* etc
+Above code for Describes that Image to speech conversion using Open cv2 Tool is used that Firstly define image to speech declaration then video capture its all by installing open cv2 toolit means show the image Infront of cv2 that captures and checks image in that it will checks colored image and it will convert to grey scale image text then after conversion to run the program it hold textual content image,we   have   added   button  key  as   ―s‖   for  captures   image   then   for   quit   the   image  we  had implemented the‖ key in keyboard then also that image will be stores in web.jpg format and the to extract text from image that we used Ocr tool that will extract text and detect text and for speech and for  quit purpose we added  ―Q‖ key in a keyboard.  Conversion we added the  GTTS tool in code that will converts the text to speech form and engine will wait and run for process and the speaker set to 0.5 range  value after speech conversion we added  ―q‖ key in the code that  will help  for quit  the  module then video will be release and stop the audio.
